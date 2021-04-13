@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="movie-cards">
+        <%= @list.name %>
+        <%= cl_image_tag @list.photo.key %>
+        <%= link_to "Add a new movie", new_list_bookmark_path(@list) %>
+      </div>
+      <div class="movie-cards">
+        <% @list.movies.each do |movie| %>
+        <div class="card-movie">
+          <%= image_tag movie.poster_url %>
+          <div class="card-movie-info">
+            <h3><%= movie.title %><span> <%= movie.rating %></span></h3>
+            <p><%=  movie.overview %></p>
+          </div>
+        </div>
+        <% end %>
+      </div>
+      <div>
+    </div>
+    <%= link_to "Back", root_path %>
+  </div>
+</div>

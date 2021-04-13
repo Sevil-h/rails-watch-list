@@ -1,21 +1,23 @@
 <%= render "homepage-banner" %>
 <div class="container">
   <div class="row justify-content-center">
-<!--     <div class="col-md-10 col-sm-12">
-      <%#= link_to 'Create a movie list', new_list_path, class: 'btn btn-primary' %>
-    </div> -->
-    <div>
-<!--       <div class="card-trip">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-        <div class="card-trip-infos">
-          <div>
-            <h2>Title here</h2>
-            <p>Short description here!</p>
+    <div class="col-md-10 col-sm-12">
+      <div class="movie-lists">
+        <div class="scrolling-wrapper">
+          <% @lists.each do |list| %>
+          <div class="m-card">
+            <% background = cl_image_tag list.photo.key %>
+            <div class="list-card">
+              <div class="list-card-img">
+                <%= cl_image_tag list.photo.key, height: 260, width: 300  %>
+              </div>
+              <h3><%= link_to list.name, list_path(list) %></h3>
+            </div>
           </div>
-          <h2 class="card-trip-pricing">£99.99</h2>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+          <% end %>
         </div>
-      </div> -->
+      </div>
+    </div>
+    <div>
     </div>
   </div>
-</div>
