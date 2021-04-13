@@ -9,6 +9,7 @@ require 'json'
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Cleaning up database..."
 Movie.destroy_all
+List.destroy_all
 puts "Database cleaned"
 
 url = "http://tmdb.lewagon.com/movie/top_rated"
@@ -27,3 +28,4 @@ url = "http://tmdb.lewagon.com/movie/top_rated"
   end
 end
 puts "#{Movie.count} Movies created"
+
