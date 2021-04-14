@@ -1,21 +1,21 @@
 <%= render "homepage-banner" %>
-<div class="container">
+<div class="">
   <div class="row justify-content-center">
-    <div class="col-md-10 col-sm-12">
+    <div class="col-sm-12">
       <div class="movie-lists">
-        <div class="scrolling-wrapper">
-          <% @lists.each do |list| %>
+<!--         <div class="scrolling-wrapper">
+          <%# @lists.each do |list| %>
           <div class="m-card">
-            <% background = cl_image_tag list.photo.key %>
+            <%# background = cl_image_tag list.photo.key %>
             <div class="list-card">
               <div class="list-card-img">
-                <%= cl_image_tag list.photo.key, height: 260, width: 300  %>
+                <%#= cl_image_tag list.photo.key, class: "mylist-img"  %>
               </div>
-              <h3><%= link_to list.name, list_path(list) %></h3>
+              <h3><%#= link_to list.name, list_path(list) %></h3>
             </div>
           </div>
-          <% end %>
-        </div>
+          <%# end %>
+        </div> -->
       </div>
     </div>
     <div>
