@@ -9,7 +9,6 @@
   border: 3px solid white;
   box-shadow: -0.5vmin 0.5vmin 0 rgba(white, 0.5);
   background: transparent;
-  margin-top: 5vmin;
   mix-blend-mode: lighten;
   color: white;
   padding: 2vmin 2vmin 1.8vmin 2vmin;
@@ -31,3 +30,6 @@
   }
 }
 
+.h-button-margin{
+  margin-top: 5vmin;
+}
