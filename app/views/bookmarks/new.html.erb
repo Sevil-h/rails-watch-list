@@ -1,14 +1,14 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8">
-      <div>
+      <div class="reg-card ounded shadow p-5 m-5">
         <%= simple_form_for [@list, @bookmark] do |f| %>
         <%= f.association :movie, collection: Movie.all.order(:title), prompt: 'Select a movie' %>
         <%= f.input :comment, placeholder: 'Enter a comment about the movie' %>
-        <%= f.submit 'Add movie' %>
+        <%= f.submit 'Add movie', class: 'button' %>
         <% end %>
       </div>
-      <%= link_to "Back", list_path(@list) %>
+      <%= link_to "Back", list_path(@list), class: 'button' %>
     </div>
   </div>
 </div>

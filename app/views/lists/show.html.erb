@@ -1,24 +1,32 @@
+<%= render "navbar" %>
+<%= render "banner" %>
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-md-10">
-      <div class="movie-cards">
-        <%= @list.name %>
-        <%= cl_image_tag @list.photo.key %>
-        <%= link_to "Add a new movie", new_list_bookmark_path(@list) %>
-      </div>
-      <div class="movie-cards">
+    <h1 class="header"><%= @list.name %></h1>
+    <hr>
+    <div class="col-md-12">
+      <div class="box-el cards my-4">
         <% @list.movies.each do |movie| %>
-        <div class="card-movie">
-          <%= image_tag movie.poster_url %>
-          <div class="card-movie-info">
-            <h3><%= movie.title %><span> <%= movie.rating %></span></h3>
-            <p><%=  movie.overview %></p>
+        <% background_url = cl_image_path movie.poster_url %>
+        <div class="box" style="background-image: url('<%= background_url %>');">
+          <div class="box-inner">
+            <div class="the-content-box">
+              <div class="content-box-inner">
+                <h2><%= movie.title %></h2>
+                <hr>
+                  <p><%= movie.overview %></p>
+              </div>
+              <%= link_to "delete", bookmark_path, method: :delete, data: { confirm: "Are you sure you want to remove #{movie.title}?"} %>
+            </div>
           </div>
         </div>
         <% end %>
       </div>
-      <div>
+      <%= link_to "Back", lists_path, class: 'button' %>
+      <%= link_to 'Add a movie', new_list_bookmark_path(@list), class: 'button' %>
     </div>
-    <%= link_to "Back", lists_path %>
   </div>
+</div>
+<div class="footer-margin">
+  <%= render "footer" %>
 </div>

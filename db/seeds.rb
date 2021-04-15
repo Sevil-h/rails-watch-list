@@ -30,8 +30,8 @@ url = "http://tmdb.lewagon.com/movie/top_rated"
 end
 puts "#{Movie.count} Movies created"
 
-list_one = List.new(name: "Wes Anderson's Movies")
-file = URI.open('https://i.pinimg.com/474x/62/97/71/6297719f3d9cd944e2bdc88d4fb28bc4.jpg')
+list_one = List.new(name: "Favorite Movies")
+file = URI.open('https://i.pinimg.com/564x/fd/0c/f3/fd0cf3a84a6c88dbfa726c779eb5bf89.jpg')
 list_one.photo.attach(io: file, filename: 'temp.jpg', content_type: 'image.jpg')
 list_one.save
 

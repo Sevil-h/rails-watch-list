@@ -19,6 +19,15 @@
   padding: 8px;
   margin: 8px;
 }
+.reg-card{
+  color: white;
+  background-image: url('https://i.pinimg.com/474x/67/61/a4/6761a4c4037ad0be953a8705dd277782.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(0.7);
+}
+
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {

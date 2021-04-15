@@ -2,13 +2,7 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.title{
-  color: white;
-  text-align: center;
-  padding: 1em 0em;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-}
+
 .box-el{
   display: flex;
   max-width: 1400px;
@@ -27,7 +21,7 @@ body{
   &:hover{
     .the-content-box{
       transform: translateY(0%);
-      background: rgba(black, 0.8);
+      background: rgba($lacivert, 0.8);
       hr{
         width: 20%;
         transition-delay: 400ms;
