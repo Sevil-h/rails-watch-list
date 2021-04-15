@@ -1,0 +1,139 @@
+body{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.title{
+  color: white;
+  text-align: center;
+  padding: 1em 0em;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.box-el{
+  display: flex;
+  max-width: 1400px;
+  margin: auto;
+}
+.box{
+  filter: grayscale(0.7);
+  height: 400px;
+  border-radius: 8px;
+  background: $red;
+  margin: 0em .5em;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  &:hover{
+    .the-content-box{
+      transform: translateY(0%);
+      background: rgba(black, 0.8);
+      hr{
+        width: 20%;
+        transition-delay: 400ms;
+      }
+      p{
+        opacity: 1;
+        transition: all 400ms ease;
+        transform: translateY(00%);
+        transition-delay: 600ms;
+      }
+      a{
+        opacity: 1;
+        transform: translateX(0%);
+        transition-delay: 900ms;
+      }
+    }
+  }
+}
+.box-inner{
+  position: absolute;
+  height: 80%;
+  width: 90%;
+  top: 10%;
+  left: 5%;
+  overflow: hidden;
+}
+.the-content-box{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: rgba($yellow, 0.3);
+  color: white;
+  transform: translateY(80%);
+  transition: all 600ms ease;
+  h1{
+   padding: 0.2em 0em 0em 0em;
+   margin: 0;
+  }
+  hr{
+    background: $yellow;
+    height: 3px;
+    border: none;
+    margin: 1em 0em 0em 0em;
+    width: 0;
+    transition: all 400ms ease;
+  }
+  p{
+    letter-spacing: 1px;
+    opacity: 0;
+    font-family: arial !important;
+    transition: all 900ms ease;
+    transform: translateY(40%);
+    font-weight: lighter;
+  }
+}
+.content-box-inner{
+  padding: 0em 1em;
+}
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  justify-content: center;
+}
+
+.mylist-card{
+  height: 340px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px;
+  filter: grayscale(80%);
+}
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}

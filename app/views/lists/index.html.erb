@@ -1,23 +1,33 @@
-<%= render "homepage-banner" %>
-<div class="">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('assets/video.gif');">
+  <div class="container">
+    <h1 class="header">My Lists</h1>
+  </div>
+</div><div class="container">
   <div class="row justify-content-center">
-    <div class="col-sm-12">
-      <div class="movie-lists">
-<!--         <div class="scrolling-wrapper">
-          <%# @lists.each do |list| %>
-          <div class="m-card">
-            <%# background = cl_image_tag list.photo.key %>
-            <div class="list-card">
-              <div class="list-card-img">
-                <%#= cl_image_tag list.photo.key, class: "mylist-img"  %>
+    <div class="col-md-12">
+      <div class="box-el cards my-4">
+        <% @lists.each do |list| %>
+        <% background_url = cl_image_path list.photo.key %>
+        <div class="box" style="background-image: url('<%= background_url %>');">
+          <div class="box-inner">
+            <div class="the-content-box">
+              <div class="content-box-inner">
+                <h2><%= list.name %></h2>
+                <hr>
+                <ul class="mt-2">
+                  <% list.bookmarks.each do |bookmark| %>
+                  <li><%= bookmark.movie.title %></li>
+                  <% end %>
+                </ul>
+                <%= link_to "View List", list_path(list), class: "button" %>
               </div>
-              <h3><%#= link_to list.name, list_path(list) %></h3>
             </div>
           </div>
-          <%# end %>
-        </div> -->
+        </div>
+        <% end %>
       </div>
     </div>
-    <div>
-    </div>
   </div>
+</div>
+
+

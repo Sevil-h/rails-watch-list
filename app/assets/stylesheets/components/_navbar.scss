@@ -1,12 +1,24 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+  background: transparent;
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  top: 0;
+  transition: 0.5s background-color ease;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
+.nav-item{
+  a{
+    color: white;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+}
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-lewagon-color{
+ background-color: $lacivert;
 }

@@ -1,0 +1,10 @@
+$background-light: $lacivert;
+$background-dark: $lacivert;
+
+body {
+  background-image: linear-gradient(
+    to bottom right,
+    $background-dark,
+    $background-light
+  );
+}

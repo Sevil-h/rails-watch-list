@@ -9,16 +9,11 @@ $font: 'Abril Fatface', sans-serif;
 $slides: 6;
 $images: url(https://i.pinimg.com/474x/67/61/a4/6761a4c4037ad0be953a8705dd277782.jpg) url(https://tuyann.com/wp-content/uploads/2020/04/la-la-land-film-konusu-ve-analizi.jpg) url(https://i.tmgrup.com.tr/gq/img/920x615/19-09/04/eb24evjwkaamrvv.jpg?0.8516760215343908)  url(https://obicimsinema.com/wp-content/uploads/before-sunrise-1.jpg) url(https://media.bantmag.com/wp-content/uploads/2019/05/spirited-away-800x533.jpg) url(https://nickreadsbookshome.files.wordpress.com/2019/05/cmbyntoo.jpg);
 
-html, body{
+.untitled{
+  position: absolute;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-}
-
-.untitled{
-  position: absolute;
-  height: 100%;
-  width: 100%;
   @keyframes rotateHue {
     0%{ filter: hue-rotate(0deg); }
     20%{ filter: hue-rotate(0deg); }
@@ -159,37 +154,7 @@ html, body{
     }
   }
 }
-.button{
-  font-family:'Roboto Mono', sans-serif;
-  text-decoration: none;
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 2vmin;
-  display: inline-block;
-  position: relative;
-  border: 3px solid white;
-  box-shadow: -0.5vmin 0.5vmin 0 rgba(white, 0.5);
-  background: transparent;
-  margin-top: 5vmin;
-  mix-blend-mode: lighten;
-  color: white;
-  padding: 2vmin 2vmin 1.8vmin 2vmin;
-  letter-spacing: 0.1em;
-  text-shadow: none;
-  line-height: 1;
-  transform: translate3d(0.5vmin, -0.5vmin, 0);
-  transition: all 100ms linear;
-  &:hover{
-    transform: translate3d(1vmin, -1vmin, 0);
-    box-shadow: -1vmin 1vmin 0 rgba(white, 0.5);
-    background: white;
-    color: black;
-  }
-  &:active{
-    transform: translate3d(0px, 0px, 0);
-    box-shadow: -0px 0px 0 rgba(white, 0.5);
-  }
-}
+
 
 
 

@@ -1,36 +1,6 @@
-.scrolling-wrapper {
-  //only for visual
-  width: 100%;
-  margin: 0 auto;
-  background: black;
-  //---------------
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  .m-card {
-    display: inline-block;
-    //my css card below
-    width: 350px;
-    height: 420px;
-    background: black;
-    border: 8px solid black;
-    h3{
-      color: white;
-    }
-  }
-}
-.mylist-img{
-  height: 400px;
-  width: 350px;
-  filter: grayscale(90%);
-}
 .movie-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   justify-content: center;
 }
@@ -67,20 +37,20 @@
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   .movie-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .movie-cards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .movie-cards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
