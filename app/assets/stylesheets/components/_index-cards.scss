@@ -91,6 +91,9 @@ body{
   filter: grayscale(80%);
 }
 
+.star-yellow{
+  color: $yellow;
+}
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {

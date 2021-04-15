@@ -1,5 +1,7 @@
 <%= render "navbar" %>
 <%= render "banner" %>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+<link rel="stylesheet" href="fontawesome-stars.css">
 <div class="container">
   <div class="row justify-content-center">
     <h1 class="header"><%= @list.name %></h1>
@@ -13,10 +15,11 @@
             <div class="the-content-box">
               <div class="content-box-inner">
                 <h2><%= movie.title %></h2>
+                <p><i class="fas fa-star star-yellow"></i><%= movie.rating %></p>
                 <hr>
-                  <p><%= movie.overview %></p>
+                <p><%= movie.overview %></p>
               </div>
-              <%= link_to "delete", bookmark_path, method: :delete, data: { confirm: "Are you sure you want to remove #{movie.title}?"} %>
+              <%#= link_to "delete", bookmark_path, method: :delete, data: { confirm: "Are you sure you want to remove #{movie.title}?"} %>
             </div>
           </div>
         </div>
@@ -30,3 +33,4 @@
 <div class="footer-margin">
   <%= render "footer" %>
 </div>
+
