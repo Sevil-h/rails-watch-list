@@ -10,6 +10,7 @@ require 'json'
 puts "Cleaning up database..."
 Movie.destroy_all
 List.destroy_all
+Bookmark.destroy_all
 puts "Database cleaned"
 
 url = "http://tmdb.lewagon.com/movie/top_rated"
@@ -29,23 +30,23 @@ url = "http://tmdb.lewagon.com/movie/top_rated"
 end
 puts "#{Movie.count} Movies created"
 
-list_one = List.new(name: 'Classic Movies')
-file = URI.open('https://i.pinimg.com/474x/b7/24/9a/b7249a12e56d287fb33a89de2c210c86.jpg')
+list_one = List.new(name: "Wes Anderson's Movies")
+file = URI.open('https://i.pinimg.com/474x/62/97/71/6297719f3d9cd944e2bdc88d4fb28bc4.jpg')
 list_one.photo.attach(io: file, filename: 'temp.jpg', content_type: 'image.jpg')
 list_one.save
 
 list_two = List.create(name: 'Romantic Movies')
-file = URI.open('https://i.pinimg.com/564x/57/e1/7d/57e17de4cf8bc6bed5674852d2db8dd3.jpg')
+file = URI.open('https://i.pinimg.com/474x/a0/6a/ed/a06aedf5dbfe4619bbc11791cf9d14ee.jpg')
 list_two.photo.attach(io: file, filename: 'temp.jpg', content_type: 'image.jpg')
 list_two.save
 
-list_four = List.create(name: '90s Movies')
-file = URI.open('https://i.pinimg.com/474x/ac/8e/16/ac8e1697d0556fa8c1c43abfb017cc44.jpg')
+list_four = List.create(name: 'Animation')
+file = URI.open('https://i.pinimg.com/474x/c7/e5/64/c7e5642fa85fd39d63163a05e42adc05.jpg')
 list_four.photo.attach(io: file, filename: 'temp.jpg', content_type: 'image.jpg')
 list_four.save
 
-list_five = List.create(name: '2000s Movies')
-file = URI.open('https://i.pinimg.com/474x/86/9c/68/869c68d07afae1a32560a35b039fd81f.jpg')
+list_five = List.create(name: 'Classic Movies')
+file = URI.open('https://i.pinimg.com/474x/77/0c/e7/770ce7ba03936a5083e8dfbc3091af90.jpg')
 list_five.photo.attach(io: file, filename: 'temp.jpg', content_type: 'image.jpg')
 list_five.save
 

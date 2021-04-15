@@ -23,9 +23,11 @@
     box-shadow: -1vmin 1vmin 0 rgba(white, 0.5);
     background: white;
     color: black;
+    text-decoration: none;
   }
   &:active{
     transform: translate3d(0px, 0px, 0);
     box-shadow: -0px 0px 0 rgba(white, 0.5);
   }
 }
+

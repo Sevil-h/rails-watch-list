@@ -3,7 +3,8 @@
   <div class="container">
     <h1 class="header">My Lists</h1>
   </div>
-</div><div class="container">
+</div>
+<div class="container">
   <div class="row justify-content-center">
     <div class="col-md-12">
       <div class="box-el cards my-4">
@@ -27,6 +28,8 @@
         </div>
         <% end %>
       </div>
+      <%= link_to "Back", root_path, class: 'button' %>
+      <%= link_to "Add a new movie list", new_list_path, class: 'button' %>
     </div>
   </div>
 </div>
